@@ -1,5 +1,9 @@
 #ifndef MONTY_H
 #define MONTY_H
+#include <stdlib.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -30,5 +34,10 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+void ac_check(int ac);
+void fopen_check(FILE *fp, char *av1);
+char *mygetl(FILE *fp);
+void fclose_check(int fclose_r);
 
 #endif /* MONTY_H */
