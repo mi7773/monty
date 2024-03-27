@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <string.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -38,6 +39,13 @@ typedef struct instruction_s
 void ac_check(int ac);
 void fopen_check(FILE *fp, char *av1);
 char *mygetl(FILE *fp);
-void fclose_check(int fclose_r);
+void fclose_check(int fclose_r, char *av1);
+void my_opcodes(char *lineptr);
+char **mystok(char *s, char *d, char **r);
+int cdel(char *str, char del);
+void malloc_check(char *p);
+void dmalloc_check(char **p);
+void my_opcodes(char *lineptr);
+int my_check(char *s, char *c);
 
 #endif /* MONTY_H */
