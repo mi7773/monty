@@ -16,8 +16,8 @@ int main(int ac, char **av)
 		{"pint", my_pint}, {"pop", my_pop}, {"swap", my_swap},
 		{"add", my_add}, {"nop", my_nop}};
 
-	ac_check(ac);
 	fp = my_fopen(av[1]);
+	ac_check(ac);
 	while (1)
 	{
 		lineptr = my_getline(fp);
@@ -26,7 +26,7 @@ int main(int ac, char **av)
 			free(lineptr);
 			break;
 		}
-		my_monty(instruction, lineptr, i, &stack);
+		my_monty(instruction, lineptr, i, &stack, fp, av[1]);
 		i++;
 	}
 	my_fclose(fp, av[1]);

@@ -1,7 +1,7 @@
 #include "monty.h"
 
 void my_monty(instruction_t *instruction, char *lineptr, int line_number,
-		stack_t **stack);
+		stack_t **stack, FILE *fp, char *av1);
 int d = 0;
 
 /**
@@ -12,7 +12,7 @@ int d = 0;
  * @stack: draft
  */
 void my_monty(instruction_t *instruction, char *lineptr, int line_number,
-		stack_t **stack)
+		stack_t **stack, FILE *fp, char *av1)
 {
 	size_t l = strlen(lineptr) + 1;
 	char *c = (char *) malloc(l * sizeof(char));
@@ -34,6 +34,10 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 					if (p)
 					{
 						d = atoi(p);
+					}
+					if (d == 0)
+					{
+						my_fclose(fp, av1);
 					}
 				}
 				free(c);
