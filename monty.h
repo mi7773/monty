@@ -46,7 +46,7 @@ void my_nop(stack_t **stack, unsigned int line_number);
 void ac_check(int ac);
 FILE *my_fopen(char *av1);
 int my_fclose(FILE *fp, char *av1);
-char *my_getline(FILE *fp);
+char *my_getline(FILE *fp, int i);
 void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 		stack_t **stack, FILE *fp, char *av1);
 void my_free(stack_t **stack, char *c, char *lineptr, FILE *fp, char *av1);

@@ -10,7 +10,7 @@
  */
 void my_free(stack_t **stack, char *c, char *lineptr, FILE *fp, char *av1)
 {
-	if (*stack != NULL)
+	if (stack != NULL)
 	{
 		stack_t *p = *stack;
 

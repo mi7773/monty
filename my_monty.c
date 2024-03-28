@@ -37,13 +37,10 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 					{
 						d = atoi(p);
 					}
-					if (d == 0)
-					{
-					}
 				}
+				my_free(0, c, lineptr, fp, av1);
 				instruction[i].f(stack, line_number);
 				d = 0;
-				free(c);
 				return;
 			}
 			p = strtok(0, " \n");

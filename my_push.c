@@ -15,6 +15,7 @@ void my_push(stack_t **stack, unsigned int line_number)
 		if (p == NULL)
 		{
 			fprintf(stderr, "Error: malloc failed\n");
+			my_free(stack, 0, 0, 0, 0);
 			exit(EXIT_FAILURE);
 		}
 		if (*stack == NULL)
@@ -35,6 +36,7 @@ void my_push(stack_t **stack, unsigned int line_number)
 	else
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		my_free(stack, 0, 0, 0, 0);
 		exit(EXIT_FAILURE);
 	}
 }
