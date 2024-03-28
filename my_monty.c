@@ -19,8 +19,6 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 	char *p = strtok(lineptr, " \n");
 	int i;
 
-	if (p != NULL)
-		printf("%s", p);
 	i = 0;
 	while (i <= 6 && p)
 	{
