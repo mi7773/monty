@@ -11,7 +11,7 @@ void my_add(stack_t **stack, unsigned int line_number)
 	int i;
 
 	i = 0;
-	while(p)
+	while (p)
 	{
 		p = p->prev;
 		i++;
@@ -24,6 +24,7 @@ void my_add(stack_t **stack, unsigned int line_number)
 	else
 	{
 		stack_t *p = *stack;
+
 		i = p->n + (p->prev)->n;
 		*stack = (*stack)->prev;
 		(*stack)->n = i;

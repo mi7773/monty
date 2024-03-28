@@ -23,11 +23,21 @@ int main(int ac, char **av)
 		lineptr = my_getline(fp);
 		if (lineptr == NULL)
 		{
+			free(lineptr);
 			break;
 		}
 		my_monty(instruction, lineptr, i, &stack);
 		i++;
+		free(lineptr);
 	}
 	my_fclose(fp, av[1]);
+	while (stack)
+	{
+		stack_t *p = stack;
+
+		p = p->prev;
+		free(stack);
+		stack = p;
+	}
 	return (0);
 }

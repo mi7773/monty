@@ -11,7 +11,7 @@ void my_swap(stack_t **stack, unsigned int line_number)
 	int i;
 
 	i = 0;
-	while(p)
+	while (p)
 	{
 		p = p->prev;
 		i++;
