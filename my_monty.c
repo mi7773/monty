@@ -38,7 +38,7 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 						d = atoi(p);
 					}
 				}
-				my_free(0, c, lineptr, fp, av1);
+				my_free(0, c, lineptr, 0, av1);
 				instruction[i].f(stack, line_number);
 				d = 0;
 				return;

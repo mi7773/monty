@@ -16,10 +16,10 @@ int main(int ac, char **av)
 		{"pint", my_pint}, {"pop", my_pop}, {"swap", my_swap},
 		{"add", my_add}, {"nop", my_nop}};
 
+	fp = my_fopen(av[1]);
 	ac_check(ac);
 	while (1)
 	{
-		fp = my_fopen(av[1]);
 		lineptr = my_getline(fp, i);
 		if (lineptr == NULL)
 		{
@@ -28,6 +28,6 @@ int main(int ac, char **av)
 		my_monty(instruction, lineptr, i, &stack, fp, av[1]);
 		i++;
 	}
-	my_free(&stack, 0, 0, 0, 0);
+	my_free(&stack, 0, 0, fp, av[1]);
 	return (0);
 }
