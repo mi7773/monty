@@ -27,7 +27,7 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 			if (i == 0)
 			{
 				p = strtok(0, " \n");
-				if (p && p[0] != '0')
+				if (p && strcmp(p, "0") != 0)
 				{
 					d[0] = 1;
 					d[1] = atoi(p);
