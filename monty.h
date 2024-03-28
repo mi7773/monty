@@ -2,6 +2,9 @@
 #define MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+extern int d;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -44,5 +47,7 @@ void ac_check(int ac);
 FILE *my_fopen(char *av1);
 int my_fclose(FILE *fp, char *av1);
 char *my_getline(FILE *fp);
+void my_monty(instruction_t *instruction, char *lineptr, int line_number,
+		stack_t **stack);
 
 #endif /* MONTY_H */
