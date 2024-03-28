@@ -9,7 +9,7 @@ void my_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *p = NULL;
 
-	if (d !=0)
+	if (d != 0)
 	{
 		p = (stack_t *) malloc(sizeof(stack_t));
 		if (p == NULL)
