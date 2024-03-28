@@ -36,10 +36,6 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 					if (p)
 					{
 						d = atoi(p);
-						if (d == 0)
-						{
-							my_free(0, 0, 0, 0, av1);
-						}
 					}
 				}
 				my_free(0, c, lineptr, 0, av1);
