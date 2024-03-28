@@ -30,6 +30,5 @@ int main(int ac, char **av)
 		i++;
 	}
 	my_fclose(fp, av[1]);
-	my_free(&stack);
 	return (0);
 }

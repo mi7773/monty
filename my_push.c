@@ -35,7 +35,6 @@ void my_push(stack_t **stack, unsigned int line_number)
 	else
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
-		my_free(stack);
 		exit(EXIT_FAILURE);
 	}
 }

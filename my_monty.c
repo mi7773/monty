@@ -36,8 +36,6 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 						d = atoi(p);
 					}
 				}
-				free(c);
-				free(lineptr);
 				instruction[i].f(stack, line_number);
 				d = 0;
 				return;
@@ -47,8 +45,6 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 		c = strcpy(c, lineptr);
 		i++;
 	}
-	free(c);
-	free(lineptr);
 	fprintf(stderr, "L%d: unknown instruction <opcode>\n", line_number);
 	exit(EXIT_FAILURE);
 }
