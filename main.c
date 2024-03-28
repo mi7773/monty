@@ -28,7 +28,6 @@ int main(int ac, char **av)
 		}
 		my_monty(instruction, lineptr, i, &stack);
 		i++;
-		free(lineptr);
 	}
 	my_fclose(fp, av[1]);
 	my_free(&stack);

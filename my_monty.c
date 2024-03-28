@@ -31,10 +31,15 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 				if (i == 0)
 				{
 					p = strtok(0, " \n");
-					d = atoi(p);
+					if (p)
+					{
+						d = atoi(p);
+					}
 				}
-				instruction[i].f(stack, line_number);
 				free(c);
+				free(lineptr);
+				instruction[i].f(stack, line_number);
+				d = 0;
 				return;
 			}
 			p = strtok(0, " \n");
@@ -43,6 +48,7 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 		i++;
 	}
 	free(c);
+	free(lineptr);
 	fprintf(stderr, "L%d: unknown instruction <opcode>\n", line_number);
 	exit(EXIT_FAILURE);
 }
