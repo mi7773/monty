@@ -20,7 +20,7 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 	int i;
 
 	i = 0;
-	while (i <= 6)
+	while (i <= 6 && p)
 	{
 		if (strcmp(instruction[i].opcode, p) == 0)
 		{
