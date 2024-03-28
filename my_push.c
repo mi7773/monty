@@ -7,7 +7,7 @@
  */
 void my_push(stack_t **stack, unsigned int line_number)
 {
-	if (d != 0)
+	if (1)
 	{
 		stack_t *p = NULL;
 
