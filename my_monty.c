@@ -2,7 +2,7 @@
 
 void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 		stack_t **stack, FILE * fp, char *av1);
-int d = 0;
+int d[2] = {0, 0};
 
 /**
  * my_monty - draft
@@ -27,14 +27,16 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 			if (i == 0)
 			{
 				p = strtok(0, " \n");
-				if (p)
+				if (p && p[0] != '0')
 				{
-					d = atoi(p);
+					d[0] = 1;
+					d[1] = atoi(p);
 				}
 			}
 			my_free(0, 0, lineptr, 0, av1);
 			instruction[i].f(stack, line_number);
-			d = 0;
+			d[0] = 0;
+			d[1] = 0;
 			return;
 		}
 		i++;

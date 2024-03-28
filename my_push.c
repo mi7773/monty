@@ -8,7 +8,7 @@
 void my_push(stack_t **stack, unsigned int line_number)
 {
 	(void) line_number;
-	if (d != 0)
+	if ((d[0] == 1 && d[1] != 0) || (d[0] == 0))
 	{
 		stack_t *p = NULL;
 
@@ -24,13 +24,13 @@ void my_push(stack_t **stack, unsigned int line_number)
 		}
 		if (*stack == NULL)
 		{
-			p->n = d;
+			p->n = d[1];
 			p->prev = NULL;
 			p->next = NULL;
 		}
 		else
 		{
-			p->n = d;
+			p->n = d[1];
 			p->prev = *stack;
 			p->next = NULL;
 			(*stack)->next = p;
