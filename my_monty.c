@@ -39,16 +39,6 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 					}
 				}
 				my_free(0, c, lineptr, 0, av1);
-				if (d == 0 && i == 0)
-				{
-					my_free(0, 0, 0, fp, av1);
-					fprintf(stderr, "L%d: usage: push integer\n", line_number);
-					if (stack != NULL)
-					{
-						my_free(stack, 0, 0, 0, 0);
-					}
-					exit(EXIT_FAILURE);
-				}
 				instruction[i].f(stack, line_number);
 				d = 0;
 				return;
