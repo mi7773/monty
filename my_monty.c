@@ -47,8 +47,7 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 		}
 		i++;
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n", line_number,
-			strtok(lineptr, " \n"));
+	fprintf(stderr, "L%d: unknown instruction <opcode>\n", line_number);
 	my_free(stack, c, lineptr, fp, av1);
 	exit(EXIT_FAILURE);
 }
