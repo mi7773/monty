@@ -16,8 +16,8 @@ int main(int ac, char **av)
 		{"pint", my_pint}, {"pop", my_pop}, {"swap", my_swap},
 		{"add", my_add}, {"nop", my_nop}};
 
-	fp = my_fopen(av[1]);
 	ac_check(ac);
+	fp = my_fopen(av[1]);
 	while (1)
 	{
 		lineptr = my_getline(fp, i);
