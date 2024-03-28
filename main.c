@@ -23,12 +23,11 @@ int main(int ac, char **av)
 		lineptr = my_getline(fp);
 		if (lineptr == NULL)
 		{
-			free(lineptr);
 			break;
 		}
-		my_monty(instruction, lineptr, i, &stack, fp, av[1]);
+		my_monty(instruction, lineptr, i, &stack);
 		i++;
 	}
-	my_free(&stack, 0, 0, fp, av[1]);
+	my_fclose(fp, av[1]);
 	return (0);
 }

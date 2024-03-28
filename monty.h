@@ -48,7 +48,7 @@ FILE *my_fopen(char *av1);
 int my_fclose(FILE *fp, char *av1);
 char *my_getline(FILE *fp);
 void my_monty(instruction_t *instruction, char *lineptr, int line_number,
-		stack_t **stack, FILE *fp, char *av1);
+		stack_t **stack);
 void my_free(stack_t **stack, char *c, char *lineptr, FILE *fp, char *av1);
 
 #endif /* MONTY_H */
