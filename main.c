@@ -10,7 +10,7 @@ int main(int ac, char **av)
 {
 	FILE *fp = NULL;
 	char *lineptr = NULL;
-	stack_t *stack;
+	stack_t *stack = NULL;
 	int i = 0;
 	instruction_t instruction[] = {{"push", my_push}, {"pall", my_pall},
 		{"pint", my_pint}, {"pop", my_pop}, {"swap", my_swap},
