@@ -5,6 +5,27 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 int d[2] = {0, 0};
 
 /**
+ * atoi_check - draft
+ * @p: draft
+ */
+void atoi_check(char *p)
+{
+	int i;
+
+	i = 0;
+	while (p[i])
+	{
+		if (p[i] > 57 || p[i] < 48)
+		{
+			if (p[i] != '-')
+				d[1] = 0;
+			break;
+		}
+		i++;
+	}
+}
+
+/**
  * my_monty - draft
  * @instruction: draft
  * @lineptr: draft
@@ -31,11 +52,15 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 				{
 					d[0] = 1;
 					d[1] = atoi(p);
+					atoi_check(p);
 				}
 				else if (p == NULL)
 					d[0] = 1;
+				if (p[0] == '-' && p[1] ==  '0')
+					d[0] = 0;
 			}
 			my_free(0, 0, lineptr, 0, av1);
+			printf("%d\n", d[1]);
 			instruction[i].f(stack, line_number);
 			d[0] = 0;
 			d[1] = 0;
