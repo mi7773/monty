@@ -52,9 +52,12 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 				{
 					d[0] = 1;
 					d[1] = atoi(p);
+					atoi_check(p);
 				}
 				else if (p == NULL)
 					d[0] = 1;
+				if (p && strcmp(p, "-0") == 0)
+					d[0] = 0;
 			}
 			my_free(0, 0, lineptr, 0, av1);
 			instruction[i].f(stack, line_number);
