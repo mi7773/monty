@@ -55,8 +55,6 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 				}
 				else if (p == NULL)
 					d[0] = 1;
-				if (p && strcmp(p, "-0") == 0)
-					d[0] = 0;
 			}
 			my_free(0, 0, lineptr, 0, av1);
 			printf("%d\n", d[1]);
