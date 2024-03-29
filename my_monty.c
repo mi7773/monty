@@ -40,8 +40,7 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 	char *p = strtok(lineptr, " \n");
 	int i;
 
-	i = 0;
-	while (i <= 6 && p)
+	i = 0; while (i <= 6 && p)
 	{
 		if (strcmp(instruction[i].opcode, p) == 0)
 		{
@@ -50,8 +49,7 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 				p = strtok(0, " \n");
 				if (p && strcmp(p, "0") != 0)
 				{
-					d[0] = 1;
-					d[1] = atoi(p);
+					d[0] = 1, d[1] = atoi(p);
 					atoi_check(p);
 				}
 				else if (p == NULL)
