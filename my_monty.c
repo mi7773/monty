@@ -57,7 +57,6 @@ void my_monty(instruction_t *instruction, char *lineptr, int line_number,
 					d[0] = 1;
 			}
 			my_free(0, 0, lineptr, 0, av1);
-			printf("%d\n", d[1]);
 			instruction[i].f(stack, line_number);
 			d[0] = 0;
 			d[1] = 0;
